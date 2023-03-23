@@ -8,7 +8,7 @@ variables:
 steps:
   - checkout: self
     fetchDepth: 0
-    
+
   - task: gitversion/setup@0
     displayName: Install GitVersion
     inputs:
@@ -38,10 +38,10 @@ steps:
       versioningScheme: 'byEnvVar'
     versionEnvVar: 'GitVersion.NugetVersion'
 
-- task: DotNetCoreCLI@2
-  displayName: Push libraries
-  inputs:
-    command: 'push'
-    packagesToPush: '$(Build.ArtifactStagingDirectory)/*.nupkg'
-    nuGetFeedType: 'internal'
-    publishVstsFeed: 'cd43281b-c764-45ca-a804-974d979b8d0b/b4b93fc7-3bd6-45a6-a7bb-2c07e846463e'
+  - task: DotNetCoreCLI@2
+    displayName: Push libraries
+    inputs:
+      command: 'push'
+      packagesToPush: '$(Build.ArtifactStagingDirectory)/*.nupkg'
+      nuGetFeedType: 'internal'
+      publishVstsFeed: 'cd43281b-c764-45ca-a804-974d979b8d0b/b4b93fc7-3bd6-45a6-a7bb-2c07e846463e'
