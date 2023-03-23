@@ -36,7 +36,7 @@ steps:
       command: 'pack'
       packagesToPack: '**/*.csproj'
       versioningScheme: 'byEnvVar'
-    versionEnvVar: 'GitVersion.NugetVersion'
+      versionEnvVar: 'GitVersion.NugetVersion'
 
   - task: DotNetCoreCLI@2
     displayName: Push libraries
