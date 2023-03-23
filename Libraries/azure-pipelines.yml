@@ -6,33 +6,36 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-# - task: gitversion/setup@0
-#   displayName: Install GitVersion
-#   inputs:
-#     versionSpec: '5.x'
+  - checkout: self
+    fetchDepth: 0
+    
+  - task: gitversion/setup@0
+    displayName: Install GitVersion
+    inputs:
+      versionSpec: '5.x'
 
-# - task: gitversion/execute@0
-#   displayName: Generate a new version number
-#   inputs:
-#     useConfigFile: true
-#     configFilePath: 'GitVersion.yml'
+  - task: gitversion/execute@0
+    displayName: Generate a new version number
+    inputs:
+      useConfigFile: true
+      configFilePath: 'GitVersion.yml'
 
-- task: DotNetCoreCLI@2
-  displayName: Build libraries
-  inputs:
-    command: 'build'
+  - task: DotNetCoreCLI@2
+    displayName: Build libraries
+    inputs:
+      command: 'build'
 
-- task: DotNetCoreCLI@2
-  displayName: Test libraries
-  inputs:
-    command: 'test'
+  - task: DotNetCoreCLI@2
+    displayName: Test libraries
+    inputs:
+      command: 'test'
 
-- task: DotNetCoreCLI@2
-  displayName: Pack libraries
-  inputs:
-    command: 'pack'
-    packagesToPack: '**/*.csproj'
-    versioningScheme: 'byEnvVar'
+  - task: DotNetCoreCLI@2
+    displayName: Pack libraries
+    inputs:
+      command: 'pack'
+      packagesToPack: '**/*.csproj'
+      versioningScheme: 'byEnvVar'
     versionEnvVar: 'GitVersion.NugetVersion'
 
 - task: DotNetCoreCLI@2
