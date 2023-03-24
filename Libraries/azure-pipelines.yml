@@ -1,25 +1,13 @@
 trigger:
-- develop
 - master
+
+pool:
+  vmImage: 'ubuntu-latest'
 
 variables:
   buildConfiguration: 'Release'
-
+  
 steps:
-  - checkout: self
-    fetchDepth: 0
-
-  - task: gitversion/setup@0
-    displayName: Install GitVersion
-    inputs:
-      versionSpec: '5.x'
-
-  - task: gitversion/execute@0
-    displayName: Generate a new version number
-    inputs:
-      useConfigFile: true
-      configFilePath: 'GitVersion.yml'
-
   - task: DotNetCoreCLI@2
     displayName: Build libraries
     inputs:
@@ -35,13 +23,10 @@ steps:
     inputs:
       command: 'pack'
       packagesToPack: '**/*.csproj'
-      versioningScheme: 'byEnvVar'
-      versionEnvVar: 'GitVersion.NugetVersion'
+      versioningScheme: 'off'
 
-  - task: DotNetCoreCLI@2
-    displayName: Push libraries
+  - task: PublishBuildArtifacts@1
     inputs:
-      command: 'push'
-      packagesToPush: '$(Build.ArtifactStagingDirectory)/*.nupkg'
-      nuGetFeedType: 'internal'
-      publishVstsFeed: 'cd43281b-c764-45ca-a804-974d979b8d0b/b4b93fc7-3bd6-45a6-a7bb-2c07e846463e'
+      PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+      ArtifactName: 'drop'
+      publishLocation: 'Container'
