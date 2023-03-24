@@ -1,0 +1,13 @@
+C:\Succinctly\Libraries\src\GalaxyHotel.Core\bin\Debug\netstandard2.1\GalaxyHotel.Core.deps.json
+C:\Succinctly\Libraries\src\GalaxyHotel.Core\bin\Debug\netstandard2.1\GalaxyHotel.Core.dll
+C:\Succinctly\Libraries\src\GalaxyHotel.Core\bin\Debug\netstandard2.1\GalaxyHotel.Core.pdb
+C:\Succinctly\Libraries\src\GalaxyHotel.Core\bin\Debug\netstandard2.1\GalaxyHotel.Dto.dll
+C:\Succinctly\Libraries\src\GalaxyHotel.Core\bin\Debug\netstandard2.1\GalaxyHotel.Dto.pdb
+C:\Succinctly\Libraries\src\GalaxyHotel.Core\obj\Debug\netstandard2.1\GalaxyHotel.Core.csproj.AssemblyReference.cache
+C:\Succinctly\Libraries\src\GalaxyHotel.Core\obj\Debug\netstandard2.1\GalaxyHotel.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Succinctly\Libraries\src\GalaxyHotel.Core\obj\Debug\netstandard2.1\GalaxyHotel.Core.AssemblyInfoInputs.cache
+C:\Succinctly\Libraries\src\GalaxyHotel.Core\obj\Debug\netstandard2.1\GalaxyHotel.Core.AssemblyInfo.cs
+C:\Succinctly\Libraries\src\GalaxyHotel.Core\obj\Debug\netstandard2.1\GalaxyHotel.Core.csproj.CoreCompileInputs.cache
+C:\Succinctly\Libraries\src\GalaxyHotel.Core\obj\Debug\netstandard2.1\GalaxyHotel.Core.csproj.CopyComplete
+C:\Succinctly\Libraries\src\GalaxyHotel.Core\obj\Debug\netstandard2.1\GalaxyHotel.Core.dll
+C:\Succinctly\Libraries\src\GalaxyHotel.Core\obj\Debug\netstandard2.1\GalaxyHotel.Core.pdb

@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = GalaxyHotel.Infrastructure.IntegrationTests
+build_property.ProjectDir = C:\Succinctly\Libraries\tests\GalaxyHotel.Infrastructure.IntegrationTests\
